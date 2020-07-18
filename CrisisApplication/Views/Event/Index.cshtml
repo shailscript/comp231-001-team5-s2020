@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Event>
+
+@{
+    ViewBag.Title = "Centennial College Crisis Alert";
+}
+
+ 
+        <div>
+
+        @if (TempData["message"] != null)
+        {
+            <div class="alert alert-success">@TempData["message"]</div>
+        }
+
+        <h4>Events</h4>
+        <div>
+            <p>Shows list of events</p>
+        </div>
+
+        <div class="table-responsive-sm">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Description</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (Event e in Model)
+                    {
+                        <tr>
+                            <td><a asp-action="EventDetails" asp-route-eventID="@e.EventID">@e.EventName</a></td>
+                            <td>@e.EventDescr</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+            <a asp-action="AddEvent" asp-controller="Event" class="btn btn-danger float-right">Create an Event</a>
+        </div>
+
+    </div>

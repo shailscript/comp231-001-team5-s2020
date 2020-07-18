@@ -1,0 +1,24 @@
+﻿<!-- Name: Nadine Castro, Student Number: 301105146 -->
+@model Event
+@{
+    ViewBag.Title = "Edit Event";
+}
+
+<h4>Edit Event</h4>
+
+<div>
+    <p>Edit an existing event</p>
+</div>
+<hr />
+
+<div>
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="EventID" />
+
+        @Html.Partial("EventPartial")
+
+        <button type="submit" class="btn btn-danger">Save</button>
+        <button asp-action="Index" asp-controller="Event" class="btn btn-danger">Cancel</button>
+
+    </form>
+</div>
