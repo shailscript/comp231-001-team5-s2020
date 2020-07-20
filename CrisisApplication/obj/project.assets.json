@@ -12622,19 +12622,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nadine\\.nuget\\packages\\": {}
+    "C:\\Users\\ritpa\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nadine\\source\\repos\\CrisisApplication\\CrisisApplication\\CrisisApplication.csproj",
+      "projectUniqueName": "D:\\Centennial\\Sem2\\SoftwareDevelopment\\comp231-001-team5-s2020\\CrisisApplication\\CrisisApplication.csproj",
       "projectName": "CrisisApplication",
-      "projectPath": "C:\\Users\\Nadine\\source\\repos\\CrisisApplication\\CrisisApplication\\CrisisApplication.csproj",
-      "packagesPath": "C:\\Users\\Nadine\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nadine\\source\\repos\\CrisisApplication\\CrisisApplication\\obj\\",
+      "projectPath": "D:\\Centennial\\Sem2\\SoftwareDevelopment\\comp231-001-team5-s2020\\CrisisApplication\\CrisisApplication.csproj",
+      "packagesPath": "C:\\Users\\ritpa\\.nuget\\packages\\",
+      "outputPath": "D:\\Centennial\\Sem2\\SoftwareDevelopment\\comp231-001-team5-s2020\\CrisisApplication\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Nadine\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ritpa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12670,7 +12674,6 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -12681,16 +12684,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }
