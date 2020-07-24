@@ -1,28 +1,32 @@
-﻿
+﻿@model CrisisApplication.Models.ViewsModel.SigninModel;
+
+
 @{
     ViewData["Title"] = "SignIn";
 }
 <div class="container">
     <div class="d-flex justify-content-center h-100">
-        <div class="cardsignin">
-            <div class="card-header">
+        <div class="card border-primary mb-3" style="height: 350px">
+            <div class="card-header text-white bg-primary mb-3">
                 <h3>Sign In</h3>
             </div>
             <div class="card-body">
-                <form>
+                <form asp-action="SignIn" asp-controller="Account" method="post">
                     <div class="input-group form-group">
-                        <input type="text" class="form-control" placeholder="username">
+                        <input type="text" class="form-control" asp-for="Name" placeholder="username" required>
                     </div>
                     <div class="input-group form-group">
-                        <input type="password" class="form-control" placeholder="password">
+                        <input type="password" asp-for="Password" class="form-control" placeholder="password" required>
                     </div>
+                    <div class="text-danger" asp-validation-summary="All"></div>
+
                     <div class="form-group">
-                        <input type="submit" value="Login" class="btn float-right login_btn">
+                        <input type="submit" value="Login" class="btn float-right login_btn btn-outline-primary">
                     </div>
                 </form>
                 <br>
-            </div>
-            <div class="card-footer">
+            </div><br />
+            <div class="card-footer text-white bg-primary">
                 <div class="d-flex justify-content-center links">
                     Don't have an account?<a asp-action="SignUp" asp-controller="Account">Sign Up</a>
                 </div>

@@ -1,37 +1,36 @@
-﻿
+﻿@model SignupModel
 @{
     ViewData["Title"] = "SignUp";
 }
 
 <div class="container">
     <div class="d-flex justify-content-center h-100">
-        <div class="card">
-            <div class="card-header">
+        <div class="card border-primary mb-3">
+            <div class="card-header text-white bg-primary mb-3">
                 <h3>Sign Up</h3>
             </div>
             <div class="card-body">
-                <form>
+                <form asp-action="SignUp" asp-controller="Account" method="post">
                     <div class="input-group form-group">
-                        <input type="text" class="form-control" placeholder="First name">
+                        <input type="text" asp-for="Name" class="form-control" placeholder="Name" required>
                     </div>
                     <div class="input-group form-group">
-                        <input type="text" class="form-control" placeholder="Last Name">
+                        <input type="email" asp-for="Email" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="input-group form-group">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="password" asp-for="Password" class="form-control" placeholder="password" required>
                     </div>
                     <div class="input-group form-group">
-                        <input type="password" class="form-control" placeholder="password">
+                        <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="Re-enter password" required>
                     </div>
-                    <div class="input-group form-group">
-                        <input type="password" class="form-control" placeholder="Re-enter password">
+                    <div class="text-danger" asp-validation-summary="All">
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Sign Up" class="btn float-right login_btn">
+                        <input type="submit" value="Sign Up" class="btn float-right login_btn"><br /><br />
                     </div>
                 </form>
             </div>
-            <div class="card-footer">
+            <div class="card-footer text-white bg-primary">
                 <div class="d-flex justify-content-center links">
                     Already have an account?<a asp-action="SignIn" asp-controller="Account">Sign In</a>
                 </div>
