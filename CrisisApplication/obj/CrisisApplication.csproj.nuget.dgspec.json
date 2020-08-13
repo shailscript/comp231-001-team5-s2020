@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nadine\\source\\repos\\CrisisApplication\\CrisisApplication\\CrisisApplication.csproj": {}
+    "C:\\Users\\shamr\\Source\\Repos\\comp231-001-team5-s2020\\CrisisApplication\\CrisisApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nadine\\source\\repos\\CrisisApplication\\CrisisApplication\\CrisisApplication.csproj": {
+    "C:\\Users\\shamr\\Source\\Repos\\comp231-001-team5-s2020\\CrisisApplication\\CrisisApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nadine\\source\\repos\\CrisisApplication\\CrisisApplication\\CrisisApplication.csproj",
+        "projectUniqueName": "C:\\Users\\shamr\\Source\\Repos\\comp231-001-team5-s2020\\CrisisApplication\\CrisisApplication.csproj",
         "projectName": "CrisisApplication",
-        "projectPath": "C:\\Users\\Nadine\\source\\repos\\CrisisApplication\\CrisisApplication\\CrisisApplication.csproj",
-        "packagesPath": "C:\\Users\\Nadine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nadine\\source\\repos\\CrisisApplication\\CrisisApplication\\obj\\",
+        "projectPath": "C:\\Users\\shamr\\Source\\Repos\\comp231-001-team5-s2020\\CrisisApplication\\CrisisApplication.csproj",
+        "packagesPath": "C:\\Users\\shamr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\shamr\\Source\\Repos\\comp231-001-team5-s2020\\CrisisApplication\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Nadine\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shamr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +73,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
