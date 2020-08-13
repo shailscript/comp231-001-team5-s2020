@@ -42,7 +42,7 @@ namespace CrisisApplication
             app.UseStaticFiles();
             app.UseStatusCodePages();
             app.UseMvc(routes => {
-                routes.MapRoute(name: "default", template: "{controller=Contact}/{action=ContactHome}/{id?}");
+                routes.MapRoute(name: "default", template: "{controller=Account}/{action=SignIn}/{id?}");
             });
             SeedData.EnsurePopulated(app);
             IdentitySeedData.EnsurePopulated(app);
