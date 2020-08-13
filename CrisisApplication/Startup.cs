@@ -33,6 +33,7 @@ namespace CrisisApplication
             .AddEntityFrameworkStores<AppIdentityDbContext>()
             .AddDefaultTokenProviders();
             services.AddTransient<IEventRepository, EFEventRepository>();
+            services.AddTransient<IResponseRepository, EFResponseRepository>();
             services.AddMvc();
         }
 
@@ -41,6 +42,7 @@ namespace CrisisApplication
         {
             app.UseStaticFiles();
             app.UseStatusCodePages();
+            app.UseDeveloperExceptionPage();
             app.UseMvc(routes => {
                 routes.MapRoute(name: "default", template: "{controller=Account}/{action=SignIn}/{id?}");
             });
