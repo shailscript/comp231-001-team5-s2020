@@ -6,6 +6,7 @@ using CrisisApplication.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +26,12 @@ namespace CrisisApplication
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                 Configuration["Data:CrisisApp:ConnectionString"]));
+            services.AddDbContext<AppIdentityDbContext>(options =>
+            options.UseSqlServer(
+            Configuration["Data:CrisisAppIdentity:ConnectionString"]));
+            services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<AppIdentityDbContext>()
+            .AddDefaultTokenProviders();
             services.AddTransient<IEventRepository, EFEventRepository>();
             services.AddMvc();
         }
@@ -34,9 +41,11 @@ namespace CrisisApplication
         {
             app.UseStaticFiles();
             app.UseStatusCodePages();
-            //app.UseMvcWithDefaultRoute();
-            app.UseMvc(routes => { routes.MapRoute(name: "default", template: "{Controller=Event}/{Action=Index}/{id?}"); });
+            app.UseMvc(routes => {
+                routes.MapRoute(name: "default", template: "{controller=Account}/{action=SignIn}/{id?}");
+            });
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }
