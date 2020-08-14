@@ -30,7 +30,7 @@ namespace CrisisApplication.Controllers
             if (ModelState.IsValid)
             {
                 repository.SaveResponse(response);
-                return View("SavedResponse");
+                return View("SavedResponse", response); //nadine 8.11.2020
             }
             return View("ResponseUi");
         }

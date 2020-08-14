@@ -1,7 +1,23 @@
-﻿
+﻿<!--nadine 8.11.2020-->
+@model Response
+
 @{
     ViewData["Title"] = "SavedResponse";
 }
 
-<h2>Your Response has been saved</h2>
+
+<div>
+    @if (Model.Status.Equals("Safe"))
+    {
+        <h4>Thank you for responding that you are safe, @Model.Email.</h4>
+        <p>Your response has been recorded.</p>
+    }
+    else if (Model.Status.Equals("Not Safe"))
+    {
+        <h4>We understand that you are not safe, @Model.Email.</h4>
+        <p>Your response has been recorded. Please contact 416-439-4357 for someone to assist you immediately.</p>
+    }
+
+</div>
+<hr />
 
