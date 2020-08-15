@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Centennial College Crisis Management System";
+    Layout = "_CMNavLayout";
 }
 
 
@@ -14,7 +15,7 @@
     <div>
         <form asp-action="Edit" method="post">
 
-            @Html.Partial("EventPartial")
+            <partial name="_EventPartial"/>
 
 
             <button type="submit" class="btn btn-danger">Save</button>
