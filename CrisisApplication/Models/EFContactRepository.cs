@@ -19,15 +19,20 @@ namespace CrisisApplication.Models
 
         public void SaveContact(Contact contact)
         {
-            var dbEntry = GetContact(contact.StudentID);
-
-            if (dbEntry != null)
+            if (contact.ContactID == 0)
             {
-                dbEntry = contact;
+                context.Contacts.Add(contact);
             }
             else
             {
-                context.Contacts.Add(contact);
+                var dbEntry = context.Contacts
+                    .FirstOrDefault(c => c.ContactID == contact.ContactID);
+
+                if (dbEntry != null)
+                {
+                    contact.ContactID = dbEntry.ContactID;
+                    dbEntry = contact;
+                }                
             }
             context.SaveChanges();
         }
