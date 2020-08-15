@@ -22,7 +22,7 @@ namespace CrisisApplication.Controllers
             return View();
         }
 
-        public ViewResult Alert()
+        public ViewResult Events()
         {
             return View();
         }
