@@ -1,6 +1,7 @@
 ﻿@model Event
 @{
     ViewBag.Title = "Centennial College Crisis Management System";
+    Layout = "_CMNavLayout";
 }
 
 
@@ -14,38 +15,38 @@
 </div>
 
 <div>
-<table class="table-responsive-sm float-right ">
-    <tr>
-        <td>
-            <form>
-                <a asp-action="Edit" class="btn btn-sm btn-warning"
-                   asp-route-eventID="@Model.EventID">
-                    Edit
-                </a>
-
-                <a asp-action="Delete" class="btn btn-danger btn-sm"
-                   asp-route-eventID="@Model.EventID">
-                    Delete
-                </a>
-            </form>
-        </td>
-    </tr>
-</table>
-<br />
-
-
-<div class="table-responsive-sm">
-    <table class="table table-bordered">
+    <table class="table-responsive-sm float-right ">
         <tr>
-            <th>Event Name</th>
-            <td>@Model.EventName</td>
-        </tr>
-        <tr>
-            <th>Description</th>
-            <td>@Model.EventDescr</td>
+            <td>
+                <form>
+                    <a asp-action="Edit" class="btn btn-sm btn-warning"
+                       asp-route-eventID="@Model.EventID">
+                        Edit
+                    </a>
+
+                    <a asp-action="Delete" class="btn btn-danger btn-sm"
+                       asp-route-eventID="@Model.EventID">
+                        Delete
+                    </a>
+                </form>
+            </td>
         </tr>
     </table>
-</div>
+    <br />
+
+
+    <div class="table-responsive-sm">
+        <table class="table table-bordered">
+            <tr>
+                <th>Event Name</th>
+                <td>@Model.EventName</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>@Model.EventDescr</td>
+            </tr>
+        </table>
+    </div>
 
 </div>
 

@@ -58,5 +58,10 @@ namespace CrisisApplication.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        public ActionResult FireEvent()
+        {
+            return View("Index");
+        }
     }
 }
