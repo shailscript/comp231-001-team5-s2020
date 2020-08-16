@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using CrisisApplication.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace CrisisApplication.Controllers
 {
     public class ResponseController : Controller
     {
 
-        private IResponseRepository repository;
+        private IResponseRepository responseRepository;
+        private IContactRepository contactRepository;
 
-        public ResponseController(IResponseRepository repo)
+        public ResponseController(IResponseRepository responseRepository, IContactRepository contactRepository)
         {
-            this.repository = repo;
+            this.responseRepository = responseRepository;
+            this.contactRepository = contactRepository;
+
         }
 
         public ViewResult SubmitResponse(String email)
@@ -26,18 +31,34 @@ namespace CrisisApplication.Controllers
         [HttpPost]
         public IActionResult SaveResponse(Response response)
         {
-
             if (ModelState.IsValid)
             {
-                repository.SaveResponse(response);
+                responseRepository.SaveResponse(response);
                 return View("SavedResponse", response); //nadine 8.11.2020
             }
-            return View("ResponseUi");
+            return View("ResponseUi", response);
         }
 
         public ViewResult SavedResponse()
         {
             return View();
-        }
+        }       
+        
+        public ActionResult RespondToEvent(int id)
+        {
+            Response response = new Response();
+            Contact contact = contactRepository.Contacts.FirstOrDefault(c => c.ContactID == id);
+
+            if(contact != null)
+            {
+                response.Email = contact.Email;
+            }
+            else
+            {
+                response.Email = "";
+            }
+
+            return View("ResponseUI", response);
+        }       
     }
 }

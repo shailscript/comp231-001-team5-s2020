@@ -20,6 +20,7 @@ namespace CrisisApplication.Models
         public void SaveResponse(Response response)
         {
             context.Responses.Add(response);
+            context.SaveChanges();
         }
     }
 }

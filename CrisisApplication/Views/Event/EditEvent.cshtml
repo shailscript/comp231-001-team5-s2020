@@ -2,6 +2,7 @@
 @model Event
 @{
     ViewBag.Title = "Edit Event";
+    Layout = "_CMNavLayout";
 }
 
 <h4>Edit Event</h4>
@@ -15,7 +16,7 @@
     <form asp-action="Edit" method="post">
         <input type="hidden" asp-for="EventID" />
 
-        @Html.Partial("EventPartial")
+        <partial name="_EventPartial" />
 
         <button type="submit" class="btn btn-danger">Save</button>
         <button asp-action="Index" asp-controller="Event" class="btn btn-danger">Cancel</button>

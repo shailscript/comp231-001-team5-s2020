@@ -11,10 +11,15 @@
     <input asp-for="EventName" class="form-control" />
 </div>
 
-
 <div class="form-group">
     <label asp-for="EventDescr">Description:</label>
     <div><span asp-validation-for="EventDescr" class="text-danger"></span></div>
     <textarea asp-for="EventDescr" class="form-control"></textarea>
+</div>
+
+<div class="form-group">
+    <label asp-for="RespondentMetaInfo">Respondent Information:</label>
+    <div><span asp-validation-for="RespondentMetaInfo" class="text-danger"></span></div>
+    <textarea asp-for="RespondentMetaInfo" class="form-control"></textarea>
 </div>
 
