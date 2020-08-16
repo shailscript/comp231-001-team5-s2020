@@ -7,7 +7,6 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using CrisisApplication.Models;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CrisisApplication.Controllers
@@ -41,12 +40,15 @@ namespace CrisisApplication.Controllers
         
         public ActionResult FireEvent(Event eventToFire)
         {
-            int expectedResponses = 0;
             if(repository.Contacts.Any())
             {
+                //Get email
+                StreamReader r = new StreamReader(Path.Combine(_hostingEnvironment.WebRootPath, "Email/email.html"));
+                string emailBody = r.ReadToEnd();
+
+
                 foreach(var c in repository.Contacts)
                 {
-                    expectedResponses++;
                     try
                     {
                         var sender = new MailAddress("crisis.sender@gmail.com", "Sender") ;
@@ -62,10 +64,18 @@ namespace CrisisApplication.Controllers
                             UseDefaultCredentials = false,
                             Credentials = new NetworkCredential(sender.Address, "Secret123$")
                         };
-                        using (var mess = GetEmailTemplate(subject, c.ContactID, sender, destEmail))
+                        using (var mess = new MailMessage(sender, destEmail)
+                        {
+                            
+                            Subject = subject,
+                            Body =  emailBody,
+                            IsBodyHtml = true
+                        })
                         {
                             smtp.Send(mess);
                         }
+                        return RedirectToAction("Events", "CrisisManager");
+
                     }
                     catch(Exception e)
                     {
@@ -76,21 +86,9 @@ namespace CrisisApplication.Controllers
             return RedirectToAction("Events", "CrisisManager");
         }
         
-        private MailMessage GetEmailTemplate(string subject, int id, MailAddress sender, MailAddress reciever)
+        private string GetEmailTemplate()
         {
-            StreamReader r = new StreamReader(Path.Combine(_hostingEnvironment.WebRootPath, "Email/email1.html"));
-            string emailBody = r.ReadToEnd();
-            string responseURLString = Request.GetEncodedUrl().Replace("Contact/FireEvent", "Response/RespondToEvent/" + id);
-
-
-            MailMessage mailMessage = new MailMessage(sender, reciever)
-            {
-                Subject = subject,
-                Body = emailBody.Replace("ResponseURL", responseURLString ),
-                IsBodyHtml = true
-            };
-
-            return mailMessage;
+            return "";
         }
     }
 }

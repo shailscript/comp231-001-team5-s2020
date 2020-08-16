@@ -148,5 +148,3 @@ E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcor
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CMNavbar.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_EventPartial.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Contact\ViewContacts.cshtml.g.cs
-E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ContactLayout.cshtml.g.cs
-E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ContactNavBar.cshtml.g.cs
