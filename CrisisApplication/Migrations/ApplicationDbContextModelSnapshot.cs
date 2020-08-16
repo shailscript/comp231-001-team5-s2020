@@ -18,25 +18,6 @@ namespace CrisisApplication.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CrisisApplication.Models.Contact", b =>
-                {
-                    b.Property<int>("ContactID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
-
-                    b.Property<int>("StudentID");
-
-                    b.HasKey("ContactID");
-
-                    b.ToTable("Contacts");
-                });
-
             modelBuilder.Entity("CrisisApplication.Models.Event", b =>
                 {
                     b.Property<int>("EventID")
@@ -47,47 +28,9 @@ namespace CrisisApplication.Migrations
 
                     b.Property<string>("EventName");
 
-                    b.Property<string>("RespondentMetaInfo");
-
                     b.HasKey("EventID");
 
                     b.ToTable("Events");
-                });
-
-            modelBuilder.Entity("CrisisApplication.Models.Respondent", b =>
-                {
-                    b.Property<int>("RespondentID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
-
-                    b.Property<int>("StudentID");
-
-                    b.HasKey("RespondentID");
-
-                    b.ToTable("Respondents");
-                });
-
-            modelBuilder.Entity("CrisisApplication.Models.Response", b =>
-                {
-                    b.Property<int>("ResponseID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Email")
-                        .IsRequired();
-
-                    b.Property<string>("Status")
-                        .IsRequired();
-
-                    b.HasKey("ResponseID");
-
-                    b.ToTable("Responses");
                 });
 #pragma warning restore 612, 618
         }
