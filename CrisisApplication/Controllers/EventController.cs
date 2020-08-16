@@ -26,8 +26,10 @@ namespace CrisisApplication.Controllers
             return View();
         }
 
+
         public ViewResult EventDetails(int eventID)
         {
+
             return View("EventDetails", repository.GetEvent(eventID));
         }
 

@@ -16,7 +16,27 @@
 <body>
 
     <div class="container">
-        <partial name="CMNav_Partial.cshtml" />
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills float-right">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="CrisisManagerHome" asp-controller="CrisisManager">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="ViewContacts" asp-controller="CrisisManager">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Alert" asp-controller="CrisisManager">Alert</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link active" asp-action="ViewStatus" asp-controller="CrisisManager">Status</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Crisis Manager</h3>
+        </div>
 
         <div class="jumbotron">
             <h1 class="display-3">Status</h1>

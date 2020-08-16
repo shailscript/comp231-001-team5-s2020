@@ -125,6 +125,7 @@ E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcor
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Account\SignUp.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Contact\ContactHome.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Contact\Contactresponseconfrm.cshtml.g.cs
+E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\Alert.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\CrisisManagerHome.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\ViewContacts.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\ViewStatus.cshtml.g.cs
@@ -145,5 +146,3 @@ E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcor
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\CrisisApplication.pdb
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\CrisisApplication.genruntimeconfig.cache
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\CrisisApplication.csproj.CopyComplete
-E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\Events.cshtml.g.cs
-E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\CMNav_Partial.cshtml.g.cs
