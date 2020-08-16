@@ -10,6 +10,7 @@ namespace CrisisApplication.Models
         public int EventID { get; set; }
         public string EventName { get; set; }
         public string EventDescr { get; set; }
+        public string RespondentMetaInfo { get; set; }
        // public string City { get; set; }
        // public string Status { get; set; }
     }

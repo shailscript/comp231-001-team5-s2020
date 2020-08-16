@@ -15,8 +15,12 @@
     <div>
         <form asp-action="Edit" method="post">
 
-            <partial name="_EventPartial"/>
-
+            <partial name="_EventPartial" />
+            <div class="form-group">
+                <label asp-for="RespondentMetaInfo">Respondent Information:</label>
+                <div><span asp-validation-for="RespondentMetaInfo" class="text-danger"></span></div>
+                <textarea asp-for="RespondentMetaInfo" class="form-control"></textarea>
+            </div>
 
             <button type="submit" class="btn btn-danger">Save</button>
             <button asp-action="Index" asp-controller="Event" class="btn btn-danger">Cancel</button>
