@@ -9,6 +9,12 @@ namespace CrisisApplication.Controllers
 {
     public class CrisisManagerController : Controller
     {
+        private IResponseRepository responseRepository;
+public CrisisManagerController(IResponseRepository responseRepository)
+        {
+            this.responseRepository = responseRepository;
+        }
+
         public ViewResult CrisisManagerHome()
         {
             return View();
@@ -21,6 +27,14 @@ namespace CrisisApplication.Controllers
         public ViewResult ViewStatus()
         {
             return View();
+        }
+
+        public ViewResult ViewEventStatus(int expectedResponses)
+        {
+            ViewBag.Expected = expectedResponses;
+            ViewBag.Safe = responseRepository.Responses.Where(r => r.Status.Contains("Safe")).Count();
+            ViewBag.Unsafe = responseRepository.Responses.Where(r => r.Status.Contains("Not Safe")).Count();
+            return View("ViewStatus");
         }
 
         public ActionResult Events()

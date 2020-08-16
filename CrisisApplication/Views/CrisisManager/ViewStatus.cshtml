@@ -2,10 +2,37 @@
     Layout = "_CMNavLayout";
 }
 
-<body>
-    <div class="jumbotron">
-        <h1 class="display-3">Status</h1>
-        <p class="lead"></p><div class="form-group" style="">View the status of contacts as safe and unsafe.</div><div class="form-group" style=""></div><p></p>
-        <p></p><table class="table" style="">		  <thead>			<tr>			  			  			  <th>Safe</th>			  <th>Unsafe</th>			</tr>		  </thead>		  <tbody>			<tr>			  <th scope="row">70%</th>			  <td><b>30%</b></td>			  			  			</tr>			<tr>			  			  			  			  			</tr>			<tr>			  			  			  			  			</tr>		  </tbody>		</table><p></p>
-    </div>
-</body>
+    <body>
+        <div class="jumbotron">
+            <h1 class="display-3">Status</h1>
+            <p class="lead"></p>
+            <div class="form-group" style="">View the status of contacts as safe and unsafe.</div>
+            <div class="form-group" style=""></div><p>
+            </p>
+            <p></p><table class="table" style="">
+                <thead>
+                    <tr>
+                        Number of Responses Expected: @ViewBag.Expected 
+                    </tr>
+                    <tr>
+                        <th>Safe</th>
+                        <th>Unsafe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">@ViewBag.Safe</th>
+                        <td><b>@ViewBag.Unsafe</b></td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <a class="btn btn-danger btn-sm" asp-action="ViewEventStatus" asp-controller="CrisisManager" 
+                        asp-route-expectedResponses=@ViewBag.Expected >Update</a>
+            </div>
+        </div>
+    </body>

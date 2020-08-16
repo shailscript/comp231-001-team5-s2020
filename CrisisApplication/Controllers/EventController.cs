@@ -72,10 +72,10 @@ namespace CrisisApplication.Controllers
         public ActionResult FireEvent(int eventID)
         {
             var targetEvent = eventRepo.Events.FirstOrDefault(e => e.EventID == eventID);
-            SendContactEmail(targetEvent);
+            int expectedResponses = SendContactEmail(targetEvent);
             SendRespondentEmail(targetEvent);
             
-            return RedirectToAction("Events", "CrisisManager");
+            return RedirectToAction("ViewEventStatus", "CrisisManager", new { expectedResponses = expectedResponses });
         }
 
         private int SendContactEmail(Event targetEvent)
