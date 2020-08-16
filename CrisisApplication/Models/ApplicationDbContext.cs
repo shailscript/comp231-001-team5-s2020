@@ -16,7 +16,5 @@ namespace CrisisApplication.Models
         public DbSet<Response> Responses { get; set; }
 
         public DbSet<Contact> Contacts { get; set; }
-
-        public DbSet<Respondent> Respondents { get; set; }
     }
 }

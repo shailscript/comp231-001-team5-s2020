@@ -47,8 +47,6 @@ namespace CrisisApplication.Migrations
 
                     b.Property<string>("EventName");
 
-                    b.Property<string>("RespondentMetaInfo");
-
                     b.HasKey("EventID");
 
                     b.ToTable("Events");
