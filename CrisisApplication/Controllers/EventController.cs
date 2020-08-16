@@ -26,10 +26,8 @@ namespace CrisisApplication.Controllers
             return View();
         }
 
-
         public ViewResult EventDetails(int eventID)
         {
-
             return View("EventDetails", repository.GetEvent(eventID));
         }
 
@@ -59,6 +57,11 @@ namespace CrisisApplication.Controllers
                 TempData["message"] = $"{deletedEvent.EventName} was deleted";
             }
             return RedirectToAction("Index");
+        }
+
+        public ActionResult FireEvent(int eventID)
+        {
+            return RedirectToAction("FireEvent","Contact");
         }
     }
 }

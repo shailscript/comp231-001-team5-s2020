@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CrisisApplication.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CrisisApplication.Controllers
@@ -13,18 +14,18 @@ namespace CrisisApplication.Controllers
             return View();
         }
 
-        public ViewResult ViewContacts()
+        public ActionResult ViewContacts()
         {
-            return View();
+            return RedirectToAction("ViewContacts", "Contact");
         }
         public ViewResult ViewStatus()
         {
             return View();
         }
 
-        public ViewResult Alert()
+        public ActionResult Events()
         {
-            return View();
+            return RedirectToAction("Index", "Event");
         }
     }
 }
