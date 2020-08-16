@@ -61,6 +61,7 @@ namespace CrisisApplication.Controllers
 
         public ActionResult FireEvent(int eventID)
         {
+
             return RedirectToAction("FireEvent","Contact");
         }
     }

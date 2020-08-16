@@ -40,7 +40,7 @@ namespace CrisisApplication.Models
         public Contact GetContact(int id)
         {
             return context.Contacts
-                 .FirstOrDefault(c => c.StudentID == id);
+                 .FirstOrDefault(c => c.ContactID == id);
         }
 
         public void DeleteContact(int id)
