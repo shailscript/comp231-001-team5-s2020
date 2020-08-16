@@ -1,24 +1,41 @@
-﻿@{
-    Layout = "_CMNavLayout";
-}
+﻿<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Centennial Crisis Management System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/css/site.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/jumbotron-narrow.css" rel="stylesheet" />
+</head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-3">All Contacts</h1>
-        <p class="lead"></p><div class="form-group" style="">
-            <table class="table" style="">
-                <thead>
-                    <tr>			  <th>#</th>			  <th>First Name</th>			  <th>Last Name</th>			  <th>Student ID</th>			</tr>
-                </thead>
-                <tbody>			<tr>			  <th scope="row">1</th>			  <td>Romi</td>			  <td>Syed</td>			  <td>301106901</td>			</tr>			<tr>			  <th scope="row">2</th>			  <td>Jacob</td>			  <td>Black</td>			  <td>301234567</td>			</tr>			<tr>			  <th scope="row">3</th>			  <td>Larry</td>			  <td>Page</td>			  <td>307654321</td>			</tr>		  </tbody>
-            </table>
-        </div><div class="form-group" style=""></div><p></p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Edit Contacts</a></p>
-    </div>
 
-    <div class="row marketing">
+    <div class="container">
+        <partial name="CMNav_Partial.cshtml" />
+
+        <div class="jumbotron">
+            <h1 class="display-3">All Contacts</h1>
+            <p class="lead"></p><div class="form-group" style=""><table class="table" style="">		  <thead>			<tr>			  <th>#</th>			  <th>First Name</th>			  <th>Last Name</th>			  <th>Student ID</th>			</tr>		  </thead>		  <tbody>			<tr>			  <th scope="row">1</th>			  <td>Romi</td>			  <td>Syed</td>			  <td>301106901</td>			</tr>			<tr>			  <th scope="row">2</th>			  <td>Jacob</td>			  <td>Black</td>			  <td>301234567</td>			</tr>			<tr>			  <th scope="row">3</th>			  <td>Larry</td>			  <td>Page</td>			  <td>307654321</td>			</tr>		  </tbody>		</table></div><div class="form-group" style=""></div><p></p>
+            <p><a class="btn btn-lg btn-success" href="#" role="button">Edit Contacts</a></p>
+        </div>
+
+        <div class="row marketing">
 
 
 
-    </div>
+        </div>
+
+        <footer class="footer">
+            <p>Centennial Crisis Management System</p>
+        </footer>
+
+    </div> <!-- /container -->
+
+
 </body>
+</html>
