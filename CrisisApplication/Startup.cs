@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CrisisApplication.Models;
@@ -11,7 +10,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 
 namespace CrisisApplication
 {
@@ -31,10 +29,6 @@ namespace CrisisApplication
             services.AddDbContext<AppIdentityDbContext>(options =>
             options.UseSqlServer(
             Configuration["Data:CrisisAppIdentity:ConnectionString"]));
-
-            services.AddSingleton<IFileProvider>(new PhysicalFileProvider(
-                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")));
-
             services.AddIdentity<IdentityUser, IdentityRole>()
             .AddEntityFrameworkStores<AppIdentityDbContext>()
             .AddDefaultTokenProviders();
@@ -52,7 +46,6 @@ namespace CrisisApplication
             app.UseDeveloperExceptionPage();
             app.UseMvc(routes => {
                 routes.MapRoute(name: "default", template: "{controller=Account}/{action=SignIn}/{id?}");
-                routes.MapRoute(name: "response", template: "{controller=Response}/{action=RespondToEvent}/{id?}");
             });
             SeedData.EnsurePopulated(app);
             IdentitySeedData.EnsurePopulated(app);
