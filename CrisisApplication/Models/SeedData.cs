@@ -16,7 +16,6 @@ namespace CrisisApplication.Models
             .GetRequiredService<ApplicationDbContext>();
             context.Database.Migrate();
 
-            //Base Events
             if (!context.Events.Any())
             {
                 context.Events.AddRange(
@@ -35,16 +34,9 @@ namespace CrisisApplication.Models
                      EventName = "Event 3",
                      EventDescr = "Event Descr"
                  }
-                );                
+                );
+                context.SaveChanges();
             }
-
-            //Base Contacts
-            if (context.Contacts.Count() == 0)
-            {
-                context.Contacts.Add(new Contact { FirstName = "Test FName", LastName = "Test LName", Email = "comp231projecttestacc@gmail.com", StudentID = 1 });
-            }
-
-            context.SaveChanges();
         }
     }
 }

@@ -22,9 +22,9 @@ namespace CrisisApplication.Controllers
             return View();
         }
 
-        public ActionResult Events()
+        public ViewResult Events()
         {
-            return RedirectToAction("Index", "Event");
+            return View();
         }
     }
 }

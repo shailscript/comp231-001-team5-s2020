@@ -134,6 +134,7 @@ E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcor
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Event\Index.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Response\ResponseUi.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Response\SavedResponse.cshtml.g.cs
+E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\EventPartial.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_BasicLayout.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -146,5 +147,4 @@ E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcor
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\CrisisApplication.csproj.CopyComplete
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\Events.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CMNavLayout.cshtml.g.cs
-E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CMNavbar.cshtml.g.cs
-E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_EventPartial.cshtml.g.cs
+E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CMNav_Partial.cshtml.g.cs
