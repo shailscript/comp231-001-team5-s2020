@@ -41,6 +41,7 @@ namespace CrisisApplication
             services.AddTransient<IEventRepository, EFEventRepository>();
             services.AddTransient<IResponseRepository, EFResponseRepository>();
             services.AddTransient<IContactRepository, EFContactRepository>();
+            services.AddTransient<IRespondentsRepository, EFRespondentsRepository>();
             services.AddMvc();
         }
 
