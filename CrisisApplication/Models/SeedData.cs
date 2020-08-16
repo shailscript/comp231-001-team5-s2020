@@ -39,14 +39,9 @@ namespace CrisisApplication.Models
             }
 
             //Base Contacts
-            if (!context.Contacts.Any())
+            if (context.Contacts.Count() == 0)
             {
                 context.Contacts.Add(new Contact { FirstName = "Test FName", LastName = "Test LName", Email = "comp231projecttestacc@gmail.com", StudentID = 1 });
-            }
-
-            if (!context.Respondents.Any())
-            {
-                context.Respondents.Add(new Respondent { FirstName = "Crisis", LastName = "Respondent", Email = "crisis.respondent@gmail.com" });
             }
 
             context.SaveChanges();

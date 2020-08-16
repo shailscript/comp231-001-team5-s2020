@@ -54,25 +54,6 @@ namespace CrisisApplication.Migrations
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("CrisisApplication.Models.Respondent", b =>
-                {
-                    b.Property<int>("RespondentID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
-
-                    b.Property<int>("StudentID");
-
-                    b.HasKey("RespondentID");
-
-                    b.ToTable("Respondents");
-                });
-
             modelBuilder.Entity("CrisisApplication.Models.Response", b =>
                 {
                     b.Property<int>("ResponseID")
