@@ -59,9 +59,9 @@ namespace CrisisApplication.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult FireEvent(int eventID)
+        public ActionResult FireEvent()
         {
-            return RedirectToAction("FireEvent","Contact");
+            return View("Index");
         }
     }
 }

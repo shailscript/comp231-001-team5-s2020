@@ -126,6 +126,7 @@ E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcor
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Contact\ContactHome.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Contact\Contactresponseconfrm.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\CrisisManagerHome.cshtml.g.cs
+E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\ViewContacts.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\CrisisManager\ViewStatus.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Event\AddEvent.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Event\EditEvent.cshtml.g.cs
@@ -147,4 +148,3 @@ E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcor
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CMNavLayout.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CMNavbar.cshtml.g.cs
 E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_EventPartial.cshtml.g.cs
-E:\02 School\S20COMP231 Project 1\ProjectRepo\CrisisApplication\obj\Debug\netcoreapp2.1\Razor\Views\Contact\ViewContacts.cshtml.g.cs
