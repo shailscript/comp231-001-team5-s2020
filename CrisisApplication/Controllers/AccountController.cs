@@ -29,7 +29,6 @@ namespace CrisisApplication.Controllers
                 ReturnUrl = returnUrl
             });
         }
-
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -45,7 +44,7 @@ namespace CrisisApplication.Controllers
                     if ((await signInManager.PasswordSignInAsync(user,
                     loginModel.Password, false, false)).Succeeded)
                     {
-                        return Redirect("/CrisisManager/CrisisManagerHome");
+                        return Redirect("/Event/Index");
                     }
                 }
             }

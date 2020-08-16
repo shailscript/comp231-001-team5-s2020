@@ -2,11 +2,10 @@
 
 @{
     ViewBag.Title = "Centennial College Crisis Alert";
-    Layout = "_CMNavLayout";
 }
 
-
-    <div>
+ 
+        <div>
 
         @if (TempData["message"] != null)
         {
@@ -17,7 +16,6 @@
         <div>
             <p>Shows list of events</p>
         </div>
-        <a asp-action="AddEvent" asp-controller="Event" class="btn btn-danger float-right">Create an Event</a>
 
         <div class="table-responsive-sm">
             <table class="table table-striped table-bordered">
@@ -38,6 +36,9 @@
                         </tr>
                     }
                 </tbody>
+
             </table>
+            <a asp-action="AddEvent" asp-controller="Event" class="btn btn-danger float-right">Create an Event</a>
         </div>
+
     </div>

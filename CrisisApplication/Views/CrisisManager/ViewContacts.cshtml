@@ -20,18 +20,18 @@
             <nav>
                 <ul class="nav nav-pills float-right">
                     <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" asp-action="CrisisManagerHome" asp-controller="CrisisManager">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-action="ViewContacts" asp-controller="CrisisManager">Contacts</a>
+                        <a class="nav-link active" asp-action="ViewContacts" asp-controller="CrisisManager">Contacts</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-action="Alert" asp-controller="CrisisManager">Alert</a>
                     </li>
                     <li class="nav-item">
-
-                        <a class="nav-link active" asp-action="ViewStatus" asp-controller="CrisisManager">Status</a>
-
+                        <a class="nav-link" asp-action="ViewStatus" asp-controller="CrisisManager">Status</a>
                     </li>
                 </ul>
             </nav>
@@ -39,9 +39,9 @@
         </div>
 
         <div class="jumbotron">
-            <h1 class="display-3">Status</h1>
-            <p class="lead"></p><div class="form-group" style="">View the status of contacts as safe and unsafe.</div><div class="form-group" style=""></div><p></p>
-            <p></p><table class="table" style="">		  <thead>			<tr>			  			  			  <th>Safe</th>			  <th>Unsafe</th>			</tr>		  </thead>		  <tbody>			<tr>			  <th scope="row">70%</th>			  <td><b>30%</b></td>			  			  			</tr>			<tr>			  			  			  			  			</tr>			<tr>			  			  			  			  			</tr>		  </tbody>		</table><p></p>
+            <h1 class="display-3">All Contacts</h1>
+            <p class="lead"></p><div class="form-group" style=""><table class="table" style="">		  <thead>			<tr>			  <th>#</th>			  <th>First Name</th>			  <th>Last Name</th>			  <th>Student ID</th>			</tr>		  </thead>		  <tbody>			<tr>			  <th scope="row">1</th>			  <td>Romi</td>			  <td>Syed</td>			  <td>301106901</td>			</tr>			<tr>			  <th scope="row">2</th>			  <td>Jacob</td>			  <td>Black</td>			  <td>301234567</td>			</tr>			<tr>			  <th scope="row">3</th>			  <td>Larry</td>			  <td>Page</td>			  <td>307654321</td>			</tr>		  </tbody>		</table></div><div class="form-group" style=""></div><p></p>
+            <p><a class="btn btn-lg btn-success" href="#" role="button">Edit Contacts</a></p>
         </div>
 
         <div class="row marketing">
@@ -55,4 +55,7 @@
         </footer>
 
     </div> <!-- /container -->
+
+
 </body>
+</html>
