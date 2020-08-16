@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using CrisisApplication.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CrisisApplication.Controllers
@@ -13,9 +15,13 @@ namespace CrisisApplication.Controllers
     {
         private IContactRepository repository;
 
-        public ContactController(IContactRepository repository)
+        private readonly IHostingEnvironment _hostingEnvironment;
+        
+
+        public ContactController(IContactRepository repository, IHostingEnvironment hostingEnvironment)
         {
             this.repository = repository;
+            _hostingEnvironment = hostingEnvironment;
         }
 
         public ViewResult ContactHome()
@@ -36,6 +42,11 @@ namespace CrisisApplication.Controllers
         {
             if(repository.Contacts.Any())
             {
+                //Get email
+                StreamReader r = new StreamReader(Path.Combine(_hostingEnvironment.WebRootPath, "Email/email.html"));
+                string emailBody = r.ReadToEnd();
+
+
                 foreach(var c in repository.Contacts)
                 {
                     try
@@ -55,8 +66,10 @@ namespace CrisisApplication.Controllers
                         };
                         using (var mess = new MailMessage(sender, destEmail)
                         {
+                            
                             Subject = subject,
-                            Body = body
+                            Body =  emailBody,
+                            IsBodyHtml = true
                         })
                         {
                             smtp.Send(mess);
@@ -71,6 +84,11 @@ namespace CrisisApplication.Controllers
                 }
             }
             return RedirectToAction("Events", "CrisisManager");
-        }        
+        }
+        
+        private string GetEmailTemplate()
+        {
+            return "";
+        }
     }
 }
