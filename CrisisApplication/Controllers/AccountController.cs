@@ -20,7 +20,8 @@ namespace CrisisApplication.Controllers
             userManager = userMgr;
             signInManager = signInMgr;
         }
-
+        
+        // Annotations used to implement Identity
         [AllowAnonymous]
         public ViewResult SignIn(string returnUrl)
         {
